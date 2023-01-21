@@ -40,13 +40,22 @@
 
   <label for="add-a-review-header">Leave A Review:</label>
   <br />
-  <input type="text" id="Name" name="Name" />
-  <br />
-  <label for="location-score">Location:</label>
-  <input
-    type="text"
-    id="location-score"
-    name="location-score"
-    style="height: 15px; width: 30px"
-  />
+  <Form name="Form1" method="" action="">
+  <textarea name="review-message"  maxlength="200" rows="10" cols="25"> </textarea>
+</Form>  
+Rate the following categories on a 5 point scale:
+<br/>
+
+
+<script>
+function handleChange(input) {
+if (input.value < 1) input.value = 1;
+if (input.value > 5) input.value = 5;
+}
+</script>
+
+<label for="location-score">Location:</label>
+
+<input type="text" id="location-score" onchange="handleChange(this);" style="height:15px; width:30px;" maxlength="3"/>
+  
 </html>
