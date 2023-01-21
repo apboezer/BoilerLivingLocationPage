@@ -11,6 +11,7 @@ var nameLabels = document.getElementsByClassName('location-name');
 });
 
 //changing the image
-var imgSource = "https://i.ibb.co/r7Sw159/0-Stars.jpg"; //placeholder
+var imgSource = 'https://i.ibb.co/r7Sw159/0-Stars.jpg'; //placeholder
 var pageImg = document.getElementById('location-image');
+pageImg.src = imgSource;
 //appDiv.innerHTML = `<h1>JS Starter</h1>`;
