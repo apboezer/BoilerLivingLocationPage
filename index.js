@@ -1,10 +1,59 @@
 // Import stylesheets
 import './style.css';
+import { initializeApp } from 'firebase/app';
+import {
+  getFirestore,
+  addDoc,
+  collection,
+  getFirestore,
+  addDoc,
+  collection,
+  query,
+  orderBy,
+  onSnapshot,
+  doc,
+  setDoc,
+  where,
+  getDocs
+} from 'firebase/firestore';
+
+let db;
 
 
-document.addEventListener('DOMContentLoaded', function() {
-  console.log("Ready!");
-}, false);
+// Firebase config
+const firebaseConfig = {
+  apiKey: 'AIzaSyC05K7n9cStnFrTQ06AOpQt7cAHyLZOf3Q',
+
+  authDomain: 'boilerliving.firebaseapp.com',
+
+  projectId: 'boilerliving',
+
+  storageBucket: 'boilerliving.appspot.com',
+
+  messagingSenderId: '1020361690137',
+
+  appId: '1:1020361690137:web:75d2525326961bd9c22e88',
+
+  measurementId: 'G-CT32RLKFEJ',
+};
+
+initializeApp(firebaseConfig);
+db = getFirestore();
+
+//get the user id of the person who clicked into here
+
+getPost();
+
+async function getPost() {
+
+const postRef = db.collection('posts');
+const querySnapshot = await postRef.orderBy('description', 'desc').limit(1).get()
+if (querySnapshot.docs.length > 0) {
+    const doc = querySnapshot.docs[0];
+    console.log('Document data:', doc.data());
+}
+};
+
 
 
 
