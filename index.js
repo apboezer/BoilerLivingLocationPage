@@ -2,6 +2,10 @@
 import './style.css';
 
 
+document.addEventListener('DOMContentLoaded', function() {
+  console.log("Ready!");
+}, false);
+
 
 
 //renaming to specific location name
