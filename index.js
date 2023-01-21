@@ -1,10 +1,7 @@
 // Import stylesheets
 import './style.css';
-function print(){
-  console.log("Hello!!");
-  }
-  
-window.onload = print;
+
+
 
 
 //renaming to specific location name
