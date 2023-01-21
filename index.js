@@ -1,11 +1,11 @@
 // Import stylesheets
 import './style.css';
-
+function print(){
+  console.log("Hello!!");
+  }
+  
 window.onload = print;
 
-function print(){
-console.log("Hello!!");
-}
 
 //renaming to specific location name
 var locName = 'placeholder';
