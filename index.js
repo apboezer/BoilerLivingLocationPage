@@ -51,6 +51,8 @@ const querySnapshot = await postRef.orderBy('description', 'desc').limit(1).get(
 if (querySnapshot.docs.length > 0) {
     const doc = querySnapshot.docs[0];
     console.log('Document data:', doc.data());
+}else{
+  console.log("no");
 }
 };
 
