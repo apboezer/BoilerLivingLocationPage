@@ -42,7 +42,7 @@
   <label for="add-a-review-header">Leave A Review:</label>
   <br />
   <Form name="Form1" method="" action="">
-  <textarea name="review-message"  maxlength="200" rows="10" cols="25"> </textarea>
+  <textarea id="review-message"  maxlength="200" rows="10" cols="25"> </textarea>
 </Form>  
 Rate the following categories on a 5 point scale:
 <br/>
@@ -76,9 +76,6 @@ if (input.value > 5) input.value = 5;
 <input type="number" id="community-score" onchange="handleChange(this);" min=1 max=5 style="height:15px; width:30px;" maxlength="3"/> <br>
 
 
-
-
-  
 <!-- submit button -->
 <button id="submit-button">Submit Review</button>
 
