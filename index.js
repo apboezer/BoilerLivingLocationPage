@@ -5,9 +5,12 @@ import './style.css';
 
 //renaming to specific location name
 var locName = 'placeholder';
-const appDiv = document.getElementById('app');
 var nameLabels = document.getElementsByClassName('location-name');
 [].forEach.call(nameLabels, function (nameLabel) {
   nameLabel.innerHTML = locName;
 });
+
+//changing the image
+var imgSource = "https://i.ibb.co/r7Sw159/0-Stars.jpg"; //placeholder
+var pageImg = document.getElementById('location-image');
 //appDiv.innerHTML = `<h1>JS Starter</h1>`;
