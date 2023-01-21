@@ -1,7 +1,11 @@
 // Import stylesheets
 import './style.css';
 
-// Write Javascript code!
+window.onload = print;
+
+function print(){
+console.log("Hello!!");
+}
 
 //renaming to specific location name
 var locName = 'placeholder';
@@ -30,3 +34,4 @@ pageImg.src = imgSource;
     communityScore = document.getElementById('community-score').value;
     console.log(locationScore + " " + qualityScore + " " + amenitiesScore + " " + communityScore);
   });
+
