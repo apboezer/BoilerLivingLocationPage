@@ -29,10 +29,12 @@ pageImg.src = imgSource;
   const submit = document.getElementById('submit-button');
 
   submit.addEventListener('click', () => {
-    locationScore = document.getElementById('location-score').value;
-    qualityScore = document.getElementById('quality-score').value;
-    amenitiesScore = document.getElementById('amenities-score').value;
-    communityScore = document.getElementById('community-score').value;
-    console.log(locationScore + " " + qualityScore + " " + amenitiesScore + " " + communityScore);
+    locationScore = +document.getElementById('location-score').value;
+    qualityScore = +document.getElementById('quality-score').value;
+    amenitiesScore = +document.getElementById('amenities-score').value;
+    communityScore = +document.getElementById('community-score').value;
+    average = (locationScore + qualityScore +  amenitiesScore + communityScore) / 4;
+
+    console.log(locationScore + " " + qualityScore + " " + amenitiesScore + " " + communityScore + " " + average);
   });
 
