@@ -37,25 +37,27 @@ const firebaseConfig = {
   measurementId: 'G-CT32RLKFEJ',
 };
 
-const app = initializeApp(firebaseConfig);
-db = getFirestore(app);
+initializeApp(firebaseConfig);
+db = getFirestore();
 
 //get the user id of the person who clicked into here
 
-getPost();
+getDoc();
+let doc;
+async function getDoc() {
 
-async function getPost() {
-  
-const postRef = db.collection('userData');
-console.log("hi")
-const querySnapshot = await postRef.orderBy('timestamp', 'desc').limit(1).get()
+const docRef = collection(db,'userData');
+
+const querySnapshot = await docRef.orderBy('timestamp').limit(1).get()
+
 if (querySnapshot.docs.length > 0) {
-    const doc = querySnapshot.docs[0];
+    doc = querySnapshot.docs[0];
     console.log('Document data:', doc.data());
 }else{
-  console.log("no");
+  
 }
 };
+
 
 
 
